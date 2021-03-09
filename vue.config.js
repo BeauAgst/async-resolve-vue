@@ -6,6 +6,8 @@ module.exports = {
   chainWebpack: config => {
     config.plugin('manifest').use(new WebpackManifestPlugin({ fileName: 'manifest.json' }))
 
+    if (process.env.BUILD_MODE !== 'SSR') return
+
     config.target('node')
     config.output.libraryTarget('commonjs2')
 
