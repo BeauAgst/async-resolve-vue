@@ -5,9 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "compile": "node ./src/render.js"
   },
   "dependencies": {
+    "@vue/server-renderer": "^3.0.7",
     "core-js": "^3.6.5",
     "vue": "^3.0.0"
   },
@@ -18,7 +20,9 @@
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0"
+    "eslint-plugin-vue": "^7.0.0-0",
+    "webpack-manifest-plugin": "^3.0.0",
+    "webpack-node-externals": "^2.5.2"
   },
   "eslintConfig": {
     "root": true,
